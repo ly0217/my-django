@@ -1,0 +1,54 @@
+0.该test项目花费2个工作日，设计未细究,仅用于代码展示,部分接口未完成。
+
+1.项目基础架构简图 详见图片 'job.png' 或 'example.xmind'
+
+2.数据库结构详见 'job_test.sql'
+
+3. 环境 Python 3.9 安装包详见 'requirements.txt' , mysql_8.0, redis_3.0
+
+4. 部署启动成功 python manage.py runserver
+测试界面 http://127.0.0.1:8000/swagger/    'swagger测试页面_1.png','swagger测试页面_2.png'
+接口文档界面 http://127.0.0.1:8000/redoc/     '测试文档界面.png'
+
+5.项目目录结构
+├─.idea
+│  └─inspectionProfiles
+├─app_log  # 日志文件目录
+├─baseForms # forms 验证基础字段
+│  └─__pycache__
+├─baseModel # ORM建库的基本字段
+│  └─__pycache__
+├─baseOpenapiPar # swagger 自定义参数
+│  └─__pycache__
+├─baseSerializers # restframework 
+│  └─__pycache__
+├─config  # 配置文件
+│  └─__pycache__
+├─enterprise # B端项目
+│  ├─migrations # 数据库序列化文件
+│  │  └─__pycache__
+│  ├─packaeForms # 封装 字段验证
+│  ├─user  # 招聘企业B端用户相关接口
+│  │  └─__pycache__
+│  └─__pycache__
+├─example  # 项目配置 接口总路由
+│  └─__pycache__
+├─Job_seekers  # 求职者 C端目录
+│  ├─migrations # 数据库序列化文件
+│  │  └─__pycache__
+│  ├─user  # 求职者C端用户相关接口
+│  │  └─__pycache__
+│  └─__pycache__
+├─jwtToken # token 加密解密
+│  └─__pycache__
+├─logInit  # 日志中间键 初始化
+│  └─__pycache__
+├─packageResponse  # 封装返回数据
+│  └─__pycache__
+├─redisInit   # 初始化redis
+│  └─__pycache__
+├─utils  # 工具包
+│  └─__pycache__
+└─__pycache__
+
+6.谢谢观看
