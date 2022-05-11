@@ -1,6 +1,5 @@
 from django import forms
 from baseForms.field_err_desc import *
-from redisInit.redis_init import re_client
 from jwtToken.jwt_token import decode_jwt_token
 from config.conf import JWT_SECRET_KEY, REDIS_CACHE_TIME
 import time
