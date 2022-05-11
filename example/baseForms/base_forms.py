@@ -43,12 +43,11 @@ class Token(forms.Form):
         """
         验证token 合法
         """
-        if re_client.get_values(self.cleaned_data['token']):
-            obj = decode_jwt_token(self.cleaned_data['token'], jwt_secret_key=JWT_SECRET_KEY)
-            if obj and obj['iat'] < time.time() + REDIS_CACHE_TIME:
-                self.cleaned_data['user_id'] = obj['data']['id']
-                return self.cleaned_data['token']
-            else:
-                raise forms.ValidationError('invalid token')
+       
+        obj = decode_jwt_token(self.cleaned_data['token'], jwt_secret_key=JWT_SECRET_KEY)
+        if obj and obj['iat'] < time.time() + REDIS_CACHE_TIME:
+            self.cleaned_data['user_id'] = obj['data']['id']
+            return self.cleaned_data['token']
         else:
             raise forms.ValidationError('invalid token')
+        
